@@ -105,6 +105,9 @@ if [ $(dpkg-query -W -f='${Status}' mysql-server 2>/dev/null | grep -c "ok insta
 then
   echo 'MySQL is not currently installed, correcting now.' 
   read -p 'Press enter to continue.'
+  wget https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+  sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+  sudo apt-get update
   apt-get install mysql-server;
   sudo mysql_secure_installation
   echo -e "$date - Installed MySQL-Server & Secured." >> /var/log/autonginx.log
