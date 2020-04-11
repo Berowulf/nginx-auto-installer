@@ -1,6 +1,7 @@
 #!/bin/bash
 ##Script built and maintained by RootPrivacy.com
 ##Developer @Root
+##Made by https://webhost.sh
 ##This script is made for debian, specifically 9.x: Stretch;##
 ##REQUIRED FILES
 echo -e 'Before we get started, we will want to make sure that your system is updated.\n
